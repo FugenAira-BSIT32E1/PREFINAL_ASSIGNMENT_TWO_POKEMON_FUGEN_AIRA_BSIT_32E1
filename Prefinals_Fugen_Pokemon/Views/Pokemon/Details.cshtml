@@ -1,0 +1,75 @@
+﻿<style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+    ul {
+        padding-left: 20px;
+        list-style: none;
+    }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+    .two-column-list {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+
+    h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+</style>
+
+@model Prefinals_Pokemon_Fugen.Models.Pokemon
+@{
+    ViewBag.Title = "Pokémon Details";
+}
+
+<h3>@Model.Name</h3>
+
+<h3>Abilities and Moves</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Abilities</th>
+            <th>Moves</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <ul>
+                    @foreach (var ability in Model.Abilities)
+                    {
+                        <li>@ability</li>
+                    }
+                </ul>
+            </td>
+            <td>
+                <ul class="two-column-list">
+                    @foreach (var move in Model.Moves)
+                    {
+                        <li>@move</li>
+                    }
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a href="@Url.Action("PokemonList", "Pokemon")" class="btn btn-primary">Back to List</a>
