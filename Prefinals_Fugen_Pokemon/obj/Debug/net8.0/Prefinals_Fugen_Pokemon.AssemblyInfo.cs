@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Prefinals_Fugen_Pokemon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e9b27d6c92ceb751cbfa6e64aa241762e08ff91")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6f6bde8b57731f73ae3fc046e6099a36a753dcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prefinals_Fugen_Pokemon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prefinals_Fugen_Pokemon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
