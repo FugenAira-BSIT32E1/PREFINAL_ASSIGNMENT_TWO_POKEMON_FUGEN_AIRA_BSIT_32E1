@@ -1,0 +1,107 @@
+﻿<style>
+    .pokemon-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 25px;
+        background-color: white;
+        border: 1px solid black;
+    }
+
+        .pokemon-table th, .pokemon-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .pokemon-table th {
+            background-color: white;
+            font-size: 25px;
+        }
+
+    .pagination {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .pokemon-table a {
+        color: black;
+        text-decoration: none;
+    }
+
+        .pokemon-table a:hover {
+            text-decoration: underline;
+        }
+
+
+        .pagination a {
+            margin: 0 10px;
+            padding: 5px 10px;
+            text-decoration: none;
+            border: 1px solid black;
+            border-radius: 4px;
+            background-color: white;
+            color: black;
+        }
+
+            .pagination a:hover {
+                background-color: black;
+                color: white;
+            }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+</style>
+
+@model IEnumerable<Prefinals_Pokemon_Fugen.Models.Pokemon>
+@{
+    ViewBag.Title = "Pokémon List";
+}
+
+<h2>Pokémon List</h2>
+
+<table class="pokemon-table">
+    <thead>
+        <tr>
+            <th>Pokémon</th>
+            <th>Pokémon</th>
+            <th>Pokémon</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count(); i += 3)
+        {
+            <tr>
+                <td>
+                    @if (i < Model.Count())
+                    {
+                        <a href="@Url.Action("Details", "Pokemon", new { name = Model.ElementAt(i).Name })">@Model.ElementAt(i).Name</a>
+                    }
+                </td>
+                <td>
+                    @if (i + 1 < Model.Count())
+                    {
+                        <a href="@Url.Action("Details", "Pokemon", new { name = Model.ElementAt(i + 1).Name })">@Model.ElementAt(i + 1).Name</a>
+                    }
+                </td>
+                <td>
+                    @if (i + 2 < Model.Count())
+                    {
+                        <a href="@Url.Action("Details", "Pokemon", new { name = Model.ElementAt(i + 2).Name })">@Model.ElementAt(i + 2).Name</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="pagination">
+    @if (ViewBag.Page > 1)
+    {
+        <a href="@Url.Action("PokemonList", new { page = ViewBag.Page - 1 })" class="btn btn-primary">Previous</a>
+    }
+    <a href="@Url.Action("PokemonList", new { page = ViewBag.Page + 1 })" class="btn btn-primary">Next</a>
+</div>
