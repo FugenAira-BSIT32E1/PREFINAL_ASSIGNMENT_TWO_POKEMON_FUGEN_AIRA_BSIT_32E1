@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OwsJQ8i/XWGozsCgk18esRgj3MxIKYnoQiWRXx5mwSvyorHj4kdw5egBU2TZXbeyDj1zp5fMsh9vpVKcu00iFQ==",
+  "dgSpecHash": "2fppW6bTmh27THIUdE9sw/IvjEjzjdusqn0J3O2qsBBAhgVQ31+U7YNZT8eCpxlFjiHCTYU9xhdTI2spRtSY2w==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\Documents\\GitHub\\PREFINAL_ASSIGNMENT_TWO_POKEMON_FUGEN_AIRA_BSIT_32E1\\Prefinals_Fugen_Pokemon\\Prefinals_Fugen_Pokemon.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
