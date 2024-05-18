@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Prefinals_Fugen_Pokemon.props" />
+</Project>
